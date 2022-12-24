@@ -1,0 +1,30 @@
+src -->
+    app
+        payment-details
+            payment-details.component.ts | .html
+                payment-details-from
+                    payment-details-form.component.ts | .html
+    
+        shared  
+            payment-detail.service.ts
+            payment-details.model.ts
+
+    app.module.ts
+
+index.html (cdn path for bootstrap & fa icons)
+
+commands
+
+ng g c payment-details -s --skipTests
+ng g c payment-details/payment-detail-form -s --skipTests
+
+=> payment-detail-form are used to access variables in the shared resource. 
+=> div.form-data can use to create a div easily.
+    <div class="form-group"></div>
+
+=> Control+D to select all same words in the line
+=> Hold Control+Tab can move to preveous file
+
+inside the app.component.html include the .html file in the parent.ts. 
+Next insidethe parent .html file include the child .html file in the payment-detail-form.ts file
+
